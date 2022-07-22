@@ -39,7 +39,7 @@ public class BasicSelenium {
                 "ERROR, El usuario no pudo registrarse");
     }
 
-    @Test
+    //@Test
     public void cambiarPassword(){
         //::Login
         // click boton login
@@ -47,21 +47,21 @@ public class BasicSelenium {
         // escribir email
         driver.findElement(By.id("ctl00_MainContent_LoginControl1_TextBoxEmail")).sendKeys("pedro.3@escamoso.com");
         //escribir password
-        driver.findElement(By.id("ctl00_MainContent_LoginControl1_TextBoxPassword")).sendKeys("1234");
+        driver.findElement(By.id("ctl00_MainContent_LoginControl1_TextBoxPassword")).sendKeys("12345");
         // click boton login
         driver.findElement(By.id("ctl00_MainContent_LoginControl1_ButtonLogin")).click();
         // clic en boton settings
         driver.findElement(By.xpath("//a[@href='javascript:OpenSettingsDialog();']")).click();
 
-        driver.findElement(By.id("TextPwOld")).sendKeys("1234");;
-        driver.findElement(By.id("TextPwNew")).sendKeys("12345");;
+        driver.findElement(By.id("TextPwOld")).sendKeys("12345");;
+        driver.findElement(By.id("TextPwNew")).sendKeys("1234");;
         driver.findElement(By.xpath("//span[text()='Ok']")).click();
 
         driver.findElement(By.id("ctl00_HeaderTopControl1_LinkButtonLogout")).click();
 
         driver.findElement(By.xpath("//img[@src='/Images/design/pagelogin.png']")).click();
         driver.findElement(By.id("ctl00_MainContent_LoginControl1_TextBoxEmail")).sendKeys("pedro.3@escamoso.com");
-        driver.findElement(By.id("ctl00_MainContent_LoginControl1_TextBoxPassword")).sendKeys("12345");
+        driver.findElement(By.id("ctl00_MainContent_LoginControl1_TextBoxPassword")).sendKeys("1234");
         driver.findElement(By.id("ctl00_MainContent_LoginControl1_ButtonLogin")).click();
         driver.findElement(By.xpath("//a[@href='javascript:OpenSettingsDialog();']")).click();
 
