@@ -28,7 +28,7 @@ public class LoginTest {
     public void verifyLoginIsSuccessfully(){
         mainPage.loginButton.click();
         loginModal.emailTxtBox.writeText("pedro.3@escamoso.com");
-        loginModal.pwdTxtBox.writeText("1234");
+        loginModal.pwdTxtBox.writeText("12345");
         loginModal.loginButton.click();
 
         Assertions.assertTrue(menuSection.logoutButton.isControlDisplayed(),
